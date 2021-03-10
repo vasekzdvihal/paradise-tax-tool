@@ -1,0 +1,16 @@
+﻿{
+  "FileToTable" : "C:\\Temp\\test.csv",
+  "FileToOutput" : "C:\\Temp\\testOut.xml",
+  "XmlPattern" : "C:\\Temp\\DPFO2019.xml",
+  
+  "NamePosition" : 1,
+  "PscPosition" : 2,
+  "EmailPosition" : 3,
+  "BirthNumberPosition" : 4,
+  
+  "SectionP" : "VetaP",
+  "NameField": "jmeno",
+  "PscField" : "psc",
+  "EmailField" : "email",
+  "BirthNumber" : "rod_c"
+}

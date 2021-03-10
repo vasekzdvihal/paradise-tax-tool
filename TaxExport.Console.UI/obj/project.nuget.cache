@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "w56Q/a5yMhvcw0MwJYv8kAk2lxccub1MvtAu0VNlginIWmVHMUQACCvbeKAr+1HRHnBEj8gLkCKpopcsmVhklg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zdvih\\RiderProjects\\TableToDaneConverter\\TaxExport.Console.UI\\TaxExport.Console.UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zdvih\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\zdvih\\.nuget\\packages\\newtonsoft.json\\13.0.1-beta1\\newtonsoft.json.13.0.1-beta1.nupkg.sha512",
+    "C:\\Users\\zdvih\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\zdvih\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\zdvih\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512"
+  ],
+  "logs": []
+}
