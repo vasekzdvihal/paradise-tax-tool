@@ -13,7 +13,7 @@ Small console program for fill data from CSV input file, based on XML model docu
 
 Example of CSV file: 
 
-[]: https://github.com/vasekzdvihal/tax-export/blob/master/TaxExport.Console.UI/Resources/Capture.PNG
+![alt text](https://github.com/vasekzdvihal/tax-export/blob/master/TaxExport.Console.UI/Resources/Capture.PNG, "CSV Example")
 
 
 Part of JSON with CSV fields configuration. Row numbers are from 0!
