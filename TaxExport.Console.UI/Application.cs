@@ -32,11 +32,10 @@ namespace TaxExport.ConsoleUI
         
         public void Run()
         {
-            var xml = _pattern.LoadToXmlDocument();
             var csv = _source.LoadToStringIEnum().ToList();
-            var mappedCsv = _dataToExportMapper.Map(csv[1]);
-            var newXml = _switcher.PerformDataSwitch(xml, mappedCsv);
-            _output.SaveOutput(newXml);
+            var mappedCsv = _dataToExportMapper.Map(csv);
+
+            Console.WriteLine(mappedCsv.ToString());
         }
     }
 }

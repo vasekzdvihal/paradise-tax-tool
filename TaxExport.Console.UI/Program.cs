@@ -14,8 +14,6 @@ namespace TaxExport.ConsoleUI
                 var app = scope.Resolve<IApplication>();
                 app.Run();
             }
-
-            Console.ReadLine();
         }
     }
 }

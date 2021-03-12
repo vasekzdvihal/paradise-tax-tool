@@ -1,10 +1,11 @@
-﻿using TaxExport.ConsoleUI.DTO;
+﻿using System.Collections.Generic;
+using TaxExport.ConsoleUI.DTO;
 
 namespace TaxExport.ConsoleUI.Mappers
 {
     public interface IDataToExportMapper
     {
-        DataToExport Map(string csvLine);
+        DataToExport Map(List<string> csvLine);
     }
 
     public class DataToExportMapper : IDataToExportMapper
@@ -16,19 +17,37 @@ namespace TaxExport.ConsoleUI.Mappers
             _config = config;
         }
         
-        public DataToExport Map(string csvLine)
+        public DataToExport Map(List<string> csvLine)
         {
             var configMap = _config.FieldMapCSV();
-            string[] values = csvLine.Split(';');
-
             var result = new DataToExport();
-            
-            for (int i = 0; i < values.Length; i++)
+            var offset = 1;
+
+            for (var i = 0; i < csvLine.Count; i++)
             {
-                if (i == configMap.NamePosition - 1) result.Name = values[i];
-                if (i == configMap.PscPosition - 1) result.PSC = values[i];
-                if (i == configMap.EmailPosition - 1) result.Email = values[i];
-                if (i == configMap.BirthNumberPosition - 1) result.BirthNumber = values[i];
+                var line = csvLine[i];
+                string[] values = line.Split(';');
+                
+                if (i == configMap.NamePosition) result.Name = values[offset];
+                if (i == configMap.SurnamePositions) result.Surname = values[offset];
+                if (i == configMap.BirthNumberPosition) result.Name = values[offset];
+                if (i == configMap.ICOPosition) result.IdentificationOrganizationNumber = values[offset];
+                if (i == configMap.SocialPosition) result.SocialNumber = values[offset];
+                if (i == configMap.StreetPosition) result.StreetName = values[offset];
+                if (i == configMap.StreetNumberPosition) result.StreetNumber = values[offset];
+                if (i == configMap.WierdStreetNumberPosition) result.StreetOrientationNumber = values[offset];
+                if (i == configMap.PSCPosition) result.PostNumber = values[offset];
+                if (i == configMap.CityPosition) result.Email = values[offset];
+                if (i == configMap.PhonePosition) result.Email = values[offset];
+                if (i == configMap.EmailPosition) result.BirthNumber = values[offset];
+                if (i == configMap.DataMailboxPosition) result.BirthNumber = values[offset];
+                if (i == configMap.AccountNumberPosition) result.BirthNumber = values[offset];
+                if (i == configMap.BankCodePosition) result.BirthNumber = values[offset];
+                if (i == configMap.IncomesPosition) result.BirthNumber = values[offset];
+                if (i == configMap.ExpensesPosition) result.BirthNumber = values[offset];
+                if (i == configMap.TaxBasePosition) result.BirthNumber = values[offset];
+                if (i == configMap.HealtCarePaymentsPosition) result.BirthNumber = values[offset];
+                if (i == configMap.SocialCarePaymentsPosition) result.BirthNumber = values[offset];
             }
 
             return result;

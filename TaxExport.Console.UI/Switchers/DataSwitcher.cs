@@ -27,7 +27,7 @@ namespace TaxExport.ConsoleUI.Switchers
 
             sectionP.Attributes[pMap.NameField].Value = data.Name;
             sectionP.Attributes[pMap.EmailField].Value = data.Email;
-            sectionP.Attributes[pMap.PscField].Value = data.PSC;
+            sectionP.Attributes[pMap.PscField].Value = data.PostNumber;
             sectionP.Attributes[pMap.BirtNumberField].Value = data.BirthNumber;
 
             return xmlDocument;

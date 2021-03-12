@@ -43,12 +43,31 @@ namespace TaxExport.ConsoleUI
 
         private FieldMapCSV AssignFieldMapCSV(JObject jConfig)
         {
+            var jCsv = jConfig.SelectToken("CSV");
+            
             return new FieldMapCSV()
             {
-                NamePosition = (jConfig.SelectToken("NamePosition") ?? 0).Value<int>(),
-                PscPosition = (jConfig.SelectToken("PscPosition") ?? 0).Value<int>(),
-                EmailPosition = (jConfig.SelectToken("EmailPosition") ?? 0).Value<int>(),
-                BirthNumberPosition = (jConfig.SelectToken("BirthNumberPosition") ?? 0).Value<int>()
+                NamePosition = (jCsv.SelectToken("NamePosition") ?? 0).Value<int>(),
+                SurnamePositions = (jCsv.SelectToken("SurnamePositions") ?? 0).Value<int>(),
+                BirthNumberPosition = (jCsv.SelectToken("BirthNumberPosition") ?? 0).Value<int>(),
+                ICOPosition = (jCsv.SelectToken("ICOPosition") ?? 0).Value<int>(),
+                SocialPosition = (jCsv.SelectToken("SocialPosition") ?? 0).Value<int>(),
+                StreetPosition = (jCsv.SelectToken("StreetPosition") ?? 0).Value<int>(),
+                StreetNumberPosition = (jCsv.SelectToken("StreetNumberPosition") ?? 0).Value<int>(),
+                WierdStreetNumberPosition = (jCsv.SelectToken("WierdStreetNumberPosition") ?? 0).Value<int>(),
+                PSCPosition = (jCsv.SelectToken("PSCPosition") ?? 0).Value<int>(),
+                CityPosition = (jCsv.SelectToken("CityPosition") ?? 0).Value<int>(),
+                PhonePosition = (jCsv.SelectToken("PhonePosition") ?? 0).Value<int>(),
+                EmailPosition = (jCsv.SelectToken("EmailPosition") ?? 0).Value<int>(),
+                DataMailboxPosition = (jCsv.SelectToken("DataMailboxPosition") ?? 0).Value<int>(),
+                AccountNumberPosition = (jCsv.SelectToken("AccountNumberPosition") ?? 0).Value<int>(),
+                BankCodePosition = (jCsv.SelectToken("BankCodePosition") ?? 0).Value<int>(),
+                IncomesPosition = (jCsv.SelectToken("IncomesPosition") ?? 0).Value<int>(),
+                ExpensesPosition = (jCsv.SelectToken("ExpensesPosition") ?? 0).Value<int>(),
+                TaxBasePosition = (jCsv.SelectToken("TaxBasePosition") ?? 0).Value<int>(),
+                HealtCarePaymentsPosition = (jCsv.SelectToken("HealtCarePaymentsPosition") ?? 0).Value<int>(),
+                SocialCarePaymentsPosition = (jCsv.SelectToken("SocialCarePaymentsPosition") ?? 0).Value<int>(),
+
             };
         }
 

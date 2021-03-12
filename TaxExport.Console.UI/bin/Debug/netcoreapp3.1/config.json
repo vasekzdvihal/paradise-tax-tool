@@ -1,16 +1,42 @@
 ﻿{
-  "FileToTable" : "C:\\Temp\\test.csv",
+  "FileToTable" : "C:\\Temp\\input_form.csv",
   "FileToOutput" : "C:\\Temp\\testOut.xml",
   "XmlPattern" : "C:\\Temp\\DPFO2019.xml",
+
+  "SurnamePositions" : 1,
   
-  "NamePosition" : 1,
-  "PscPosition" : 2,
-  "EmailPosition" : 3,
-  "BirthNumberPosition" : 4,
+  "CSV" : {
+    "NamePosition" : 0,
+    "SurnamePositions" : 1,
+    "BirthNumberPosition": 2,
+    "ICOPosition": 3, 
+    "SocialPosition" : 4,
+    "StreetPosition" : 5,
+    "StreetNumberPosition" : 6,
+    "WierdStreetNumberPosition" : 7,
+    "PSCPosition" : 8,
+    "CityPosition" : 9,
+    "PhonePosition" : 10,
+    "EmailPosition" : 11,
+    "DataMailboxPosition" : 12,
+    "AccountNumberPosition" : 13,
+    "BankCodePosition" : 14,
+    "IncomesPosition" : 15,
+    "ExpensesPosition" : 16,
+    "TaxBasePosition" : 17,
+    "HealtCarePaymentsPosition" : 18,
+    "SocialCarePaymentsPosition" : 19
+  },
+  
+
   
   "SectionP" : "VetaP",
   "NameField": "jmeno",
   "PscField" : "psc",
   "EmailField" : "email",
-  "BirthNumber" : "rod_c"
+  "BirthNumber" : "rod_c",
+  
+  "SectionD" : {
+    "Name" : "prijeni"
+  }
 }
