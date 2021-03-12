@@ -13,20 +13,18 @@
           <e p="ContainerConfig.cs" t="Include" />
         </e>
         <e p="config.json" t="Include" />
-        <e p="DTO" t="Include">
-          <e p="Config" t="Include">
-            <e p="FieldMapCSV.cs" t="Include" />
-            <e p="FieldMapSectionP.cs" t="Include" />
-          </e>
-          <e p="DataToExport.cs" t="Include" />
-        </e>
+        <e p="DataSwitcher.cs" t="Include" />
         <e p="FileHandlers" t="Include">
           <e p="CsvSource.cs" t="Include" />
           <e p="XmlOutput.cs" t="Include" />
           <e p="XmlPattern.cs" t="Include" />
         </e>
         <e p="Mappers" t="Include">
-          <e p="DataToExportMapper.cs" t="Include" />
+          <e p="DataMapper.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="ClientData.cs" t="Include" />
+          <e p="SourceConfig.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -36,9 +34,6 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="Switchers" t="Include">
-          <e p="DataSwitcher.cs" t="Include" />
-        </e>
         <e p="TaxExport.Console.UI.csproj" t="IncludeRecursive" />
       </e>
       <e p="TaxExport.sln" t="IncludeFlat" />

@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using TaxExport.ConsoleUI.Common;
 using TaxExport.ConsoleUI.FIleHandlers;
 using TaxExport.ConsoleUI.Mappers;
 using TaxExport.ConsoleUI.Switchers;
@@ -21,7 +22,7 @@ namespace TaxExport.ConsoleUI
             builder.RegisterType<XmlOutput>().As<IXmlOutput>();
             
             // Mappers 
-            builder.RegisterType<DataToExportMapper>().As<IDataToExportMapper>();
+            builder.RegisterType<DataMapper>().As<IDataMapper>();
 
             // Switchers
             builder.RegisterType<DataSwitcher>().As<IDataSwitcher>();

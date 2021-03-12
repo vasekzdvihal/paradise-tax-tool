@@ -1,19 +1,18 @@
 ﻿{
-  "FileToTable" : "C:\\Temp\\input_form.csv",
-  "FileToOutput" : "C:\\Temp\\testOut.xml",
-  "XmlPattern" : "C:\\Temp\\DPFO2019.xml",
-
-  "SurnamePositions" : 1,
-  
+  "DefaultInput" : "C:\\Temp\\input_form.csv",
+  "OutputFolder" : "C:\\Temp\\output\\",
+  "TaxXmlFile" : "C:\\Temp\\DPFO.xml",
+  "HealthCareXdoFile" : "C:\\Temp\\CSSZ.xml",
+  "SocialXmlFile" : "C:\\Temp\\VZP.xdp",
   "CSV" : {
     "NamePosition" : 0,
     "SurnamePositions" : 1,
     "BirthNumberPosition": 2,
-    "ICOPosition": 3, 
-    "SocialPosition" : 4,
+    "IdentificationOrganizationNumberPosition": 3, 
+    "SocialNumberPosition" : 4,
     "StreetPosition" : 5,
     "StreetNumberPosition" : 6,
-    "WierdStreetNumberPosition" : 7,
+    "StreetOrientationNumberPosition" : 7,
     "PSCPosition" : 8,
     "CityPosition" : 9,
     "PhonePosition" : 10,
@@ -24,19 +23,22 @@
     "IncomesPosition" : 15,
     "ExpensesPosition" : 16,
     "TaxBasePosition" : 17,
-    "HealtCarePaymentsPosition" : 18,
+    "HealthCarePaymentsPosition" : 18,
     "SocialCarePaymentsPosition" : 19
   },
-  
-
-  
-  "SectionP" : "VetaP",
-  "NameField": "jmeno",
-  "PscField" : "psc",
-  "EmailField" : "email",
-  "BirthNumber" : "rod_c",
-  
-  "SectionD" : {
-    "Name" : "prijeni"
+  "TaxXmlFields": {
+    "SectionP" : {
+      "ulice": "StreetNamePosition",
+      "psc": "PSCPosition",
+      "email": "EmailPosition",
+      "rod_c": "BirthNumberPosition",
+      "c_pop": "StreetNumberPosition",
+      "c_orient": "StreetOrientationNumberPosition",
+      "c_telef": "PhonePosition",
+      "prijmeni": "SurnamePositions",
+      "dic": "BirthNumberPosition",
+      "naz_obce": "CityPosition",
+      "jmeno": "NamePosition"
+    }
   }
 }

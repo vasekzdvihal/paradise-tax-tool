@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TaxExport.ConsoleUI.Common;
 
 namespace TaxExport.ConsoleUI.FIleHandlers
 {
@@ -20,7 +21,7 @@ namespace TaxExport.ConsoleUI.FIleHandlers
 
         public IEnumerable<string> LoadToStringIEnum()
         {
-            var csv = File.ReadLines(_config.FileToTable());
+            var csv = File.ReadLines(_config.DefaultInput());
             return csv;
         }
     }

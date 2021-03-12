@@ -1,39 +1,47 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Newtonsoft.Json.Linq;
-using TaxExport.ConsoleUI.DTO;
 using TaxExport.ConsoleUI.DTO.Config;
 
-namespace TaxExport.ConsoleUI
+namespace TaxExport.ConsoleUI.Common
 {
     public interface IConfig
     {
-        string FileToTable();
-        string FileToOutput();
-        string XmlPattern();
-        FieldMapCSV FieldMapCSV();
-        FieldMapSectionP FieldMapSectionP();
+        string DefaultInput();
+        string OutputFolder();
+        string TaxXmlFile();
+        string HealthCareXdoFile();
+        string SocialXmlFile();
+        SourceConfig SourceConfig();
     }
     
     public class Config : IConfig
     {
-        private string fileToTable { get; }
-        private string fileToOutput { get;}
-        private string xmlPattern { get; }
-        private FieldMapCSV fieldMapCSV { get; }
-        private FieldMapSectionP fieldMapSectionP { get; }
+        private string DefaultInput { get; }
+        private string OutputFolder { get;}
+        private string TaxXmlFile { get; }
+        private string HealthCareXdoFile { get; }
+        private string SocialXmlFile { get; }
+        private SourceConfig SourceConfig { get; }
 
         public Config()
         {
             var jConfig = this.ReadConfigFile();
             
-            this.fileToTable = (jConfig.SelectToken("FileToTable") ?? "unknown").Value<string>();
-            this.fileToOutput = (jConfig.SelectToken("FileToOutput") ?? "unknown").Value<string>();
-            this.xmlPattern = (jConfig.SelectToken("XmlPattern") ?? "unknown").Value<string>();
-            this.fieldMapCSV = this.AssignFieldMapCSV(jConfig);
-            this.fieldMapSectionP = this.AssignFieldMapSectionP(jConfig);
+            this.DefaultInput = (jConfig.SelectToken("DefaultInput") ?? "unknown").Value<string>();
+            this.OutputFolder = (jConfig.SelectToken("OutputFolder") ?? "unknown").Value<string>();
+            this.TaxXmlFile = (jConfig.SelectToken("TaxXmlFile") ?? "unknown").Value<string>();
+            this.HealthCareXdoFile = (jConfig.SelectToken("HealthCareXdoFile") ?? "unknown").Value<string>();
+            this.SocialXmlFile = (jConfig.SelectToken("SocialXmlFile") ?? "unknown").Value<string>();
+            this.SourceConfig = this.AssignFieldMapCSV(jConfig);
         }
 
+        string IConfig.DefaultInput() => this.DefaultInput;
+        string IConfig.OutputFolder() => this.OutputFolder;
+        string IConfig.TaxXmlFile() => this.TaxXmlFile;
+        string IConfig.HealthCareXdoFile() => this.HealthCareXdoFile;
+        string IConfig.SocialXmlFile() => this.SocialXmlFile;
+        SourceConfig IConfig.SourceConfig() => this.SourceConfig;
+        
         private JObject ReadConfigFile()
         {
             var path = Directory.GetCurrentDirectory() + "\\" + "config.json";
@@ -41,21 +49,21 @@ namespace TaxExport.ConsoleUI
             return JObject.Parse(jsonConfig);
         }
 
-        private FieldMapCSV AssignFieldMapCSV(JObject jConfig)
+        private SourceConfig AssignFieldMapCSV(JObject jConfig)
         {
             var jCsv = jConfig.SelectToken("CSV");
             
-            return new FieldMapCSV()
+            return new SourceConfig()
             {
                 NamePosition = (jCsv.SelectToken("NamePosition") ?? 0).Value<int>(),
                 SurnamePositions = (jCsv.SelectToken("SurnamePositions") ?? 0).Value<int>(),
                 BirthNumberPosition = (jCsv.SelectToken("BirthNumberPosition") ?? 0).Value<int>(),
-                ICOPosition = (jCsv.SelectToken("ICOPosition") ?? 0).Value<int>(),
-                SocialPosition = (jCsv.SelectToken("SocialPosition") ?? 0).Value<int>(),
+                IdentificationOrganizationNumberPosition = (jCsv.SelectToken("IdentificationOrganizationNumberPosition") ?? 0).Value<int>(),
+                SocialNumberPosition = (jCsv.SelectToken("SocialNumberPosition") ?? 0).Value<int>(),
                 StreetPosition = (jCsv.SelectToken("StreetPosition") ?? 0).Value<int>(),
                 StreetNumberPosition = (jCsv.SelectToken("StreetNumberPosition") ?? 0).Value<int>(),
-                WierdStreetNumberPosition = (jCsv.SelectToken("WierdStreetNumberPosition") ?? 0).Value<int>(),
-                PSCPosition = (jCsv.SelectToken("PSCPosition") ?? 0).Value<int>(),
+                StreetOrientationNumberPosition = (jCsv.SelectToken("StreetOrientationNumberPosition") ?? 0).Value<int>(),
+                PostNumberPosition = (jCsv.SelectToken("PSCPosition") ?? 0).Value<int>(),
                 CityPosition = (jCsv.SelectToken("CityPosition") ?? 0).Value<int>(),
                 PhonePosition = (jCsv.SelectToken("PhonePosition") ?? 0).Value<int>(),
                 EmailPosition = (jCsv.SelectToken("EmailPosition") ?? 0).Value<int>(),
@@ -65,28 +73,9 @@ namespace TaxExport.ConsoleUI
                 IncomesPosition = (jCsv.SelectToken("IncomesPosition") ?? 0).Value<int>(),
                 ExpensesPosition = (jCsv.SelectToken("ExpensesPosition") ?? 0).Value<int>(),
                 TaxBasePosition = (jCsv.SelectToken("TaxBasePosition") ?? 0).Value<int>(),
-                HealtCarePaymentsPosition = (jCsv.SelectToken("HealtCarePaymentsPosition") ?? 0).Value<int>(),
+                HealtCarePaymentsPosition = (jCsv.SelectToken("HealthCarePaymentsPosition") ?? 0).Value<int>(),
                 SocialCarePaymentsPosition = (jCsv.SelectToken("SocialCarePaymentsPosition") ?? 0).Value<int>(),
-
             };
         }
-
-        private FieldMapSectionP AssignFieldMapSectionP(JObject jConfig)
-        {
-            return new FieldMapSectionP()
-            {
-                SectionP = (jConfig.SelectToken("SectionP") ?? "Unknown").Value<string>(),
-                NameField = (jConfig.SelectToken("NameField") ?? "Unknown").Value<string>(),
-                PscField = (jConfig.SelectToken("PscField") ?? "Unknown").Value<string>(),
-                EmailField = (jConfig.SelectToken("EmailField") ?? "Unknown").Value<string>(),
-                BirtNumberField = (jConfig.SelectToken("BirthNumber") ?? "Unknown").Value<string>()
-            };
-        }
-
-        public string FileToTable() => this.fileToTable;
-        public string FileToOutput() => this.fileToOutput;
-        public string XmlPattern() => this.xmlPattern;
-        public FieldMapCSV FieldMapCSV() => this.fieldMapCSV;
-        public FieldMapSectionP FieldMapSectionP() => this.fieldMapSectionP;
-      }
+    }
 }

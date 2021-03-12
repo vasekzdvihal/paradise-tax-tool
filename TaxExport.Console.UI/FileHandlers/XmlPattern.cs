@@ -1,33 +1,34 @@
 ﻿using System;
+using System.IO;
+using System.Net;
 using System.Xml;
+using TaxExport.ConsoleUI.Common;
 
 namespace TaxExport.ConsoleUI.FIleHandlers
 {
     public interface IXmlPattern
     {
-        string LoadToString();
-        XmlDocument LoadToXmlDocument();
+        string LoadToString(string fileName);
+        XmlDocument LoadToXmlDocument(string fileName);
     }
     
     public class XmlPattern : IXmlPattern
     {
-        private IConfig _config;
-
-        public XmlPattern(IConfig config)
+        public XmlPattern()
         {
-            _config = config;
+            
         }
         
-        public string LoadToString()
+        public string LoadToString(string fileName)
         {
-            var xmlDocument = this.LoadToXmlDocument();
-            return xmlDocument.ToString();
+            var file = File.ReadAllText(fileName);
+            return file;
         }
 
-        public XmlDocument LoadToXmlDocument()
+        public XmlDocument LoadToXmlDocument(string fileName)
         {
             XmlDocument document = new XmlDocument();
-            document.Load(_config.XmlPattern());
+            document.Load(fileName);
             return document;
         }
     }
