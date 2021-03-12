@@ -1,10 +1,8 @@
-﻿using System;
-using System.Reflection;
-using System.Xml;
+﻿using System.Reflection;
 using TaxExport.ConsoleUI.Common;
-using TaxExport.ConsoleUI.DTO;
+using TaxExport.ConsoleUI.DataModels;
 
-namespace TaxExport.ConsoleUI.Switchers
+namespace TaxExport.ConsoleUI
 {
     public interface IDataSwitcher
     {

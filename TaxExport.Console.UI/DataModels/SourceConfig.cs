@@ -1,4 +1,4 @@
-﻿namespace TaxExport.ConsoleUI.DTO.Config
+﻿namespace TaxExport.ConsoleUI.DataModels
 {
     public struct SourceConfig
     {

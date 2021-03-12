@@ -1,4 +1,4 @@
-﻿namespace TaxExport.ConsoleUI.DTO
+﻿namespace TaxExport.ConsoleUI.DataModels
 {
     public class ClientData
     {

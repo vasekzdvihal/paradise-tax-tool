@@ -13,7 +13,7 @@
     "StreetPosition" : 5,
     "StreetNumberPosition" : 6,
     "StreetOrientationNumberPosition" : 7,
-    "PSCPosition" : 8,
+    "PostNumberPosition" : 8,
     "CityPosition" : 9,
     "PhonePosition" : 10,
     "EmailPosition" : 11,
@@ -25,20 +25,5 @@
     "TaxBasePosition" : 17,
     "HealthCarePaymentsPosition" : 18,
     "SocialCarePaymentsPosition" : 19
-  },
-  "TaxXmlFields": {
-    "SectionP" : {
-      "ulice": "StreetNamePosition",
-      "psc": "PSCPosition",
-      "email": "EmailPosition",
-      "rod_c": "BirthNumberPosition",
-      "c_pop": "StreetNumberPosition",
-      "c_orient": "StreetOrientationNumberPosition",
-      "c_telef": "PhonePosition",
-      "prijmeni": "SurnamePositions",
-      "dic": "BirthNumberPosition",
-      "naz_obce": "CityPosition",
-      "jmeno": "NamePosition"
-    }
   }
 }

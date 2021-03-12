@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using TaxExport.ConsoleUI.Common;
-using TaxExport.ConsoleUI.DTO;
 
-namespace TaxExport.ConsoleUI.Mappers
+namespace TaxExport.ConsoleUI.DataModels
 {
     public interface IDataMapper
     {

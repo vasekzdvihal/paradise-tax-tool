@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using Newtonsoft.Json.Linq;
-using TaxExport.ConsoleUI.DTO.Config;
+using TaxExport.ConsoleUI.DataModels;
 
 namespace TaxExport.ConsoleUI.Common
 {
@@ -9,7 +9,7 @@ namespace TaxExport.ConsoleUI.Common
         string DefaultInput();
         string OutputFolder();
         string TaxXmlFile();
-        string HealthCareXdoFile();
+        string HealthCareXdpFile();
         string SocialXmlFile();
         SourceConfig SourceConfig();
     }
@@ -38,7 +38,7 @@ namespace TaxExport.ConsoleUI.Common
         string IConfig.DefaultInput() => this.DefaultInput;
         string IConfig.OutputFolder() => this.OutputFolder;
         string IConfig.TaxXmlFile() => this.TaxXmlFile;
-        string IConfig.HealthCareXdoFile() => this.HealthCareXdoFile;
+        string IConfig.HealthCareXdpFile() => this.HealthCareXdoFile;
         string IConfig.SocialXmlFile() => this.SocialXmlFile;
         SourceConfig IConfig.SourceConfig() => this.SourceConfig;
         
@@ -63,7 +63,7 @@ namespace TaxExport.ConsoleUI.Common
                 StreetPosition = (jCsv.SelectToken("StreetPosition") ?? 0).Value<int>(),
                 StreetNumberPosition = (jCsv.SelectToken("StreetNumberPosition") ?? 0).Value<int>(),
                 StreetOrientationNumberPosition = (jCsv.SelectToken("StreetOrientationNumberPosition") ?? 0).Value<int>(),
-                PostNumberPosition = (jCsv.SelectToken("PSCPosition") ?? 0).Value<int>(),
+                PostNumberPosition = (jCsv.SelectToken("PostNumberPosition") ?? 0).Value<int>(),
                 CityPosition = (jCsv.SelectToken("CityPosition") ?? 0).Value<int>(),
                 PhonePosition = (jCsv.SelectToken("PhonePosition") ?? 0).Value<int>(),
                 EmailPosition = (jCsv.SelectToken("EmailPosition") ?? 0).Value<int>(),

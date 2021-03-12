@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Linq;
-using System.Xml;
 using TaxExport.ConsoleUI.Common;
-using TaxExport.ConsoleUI.FIleHandlers;
-using TaxExport.ConsoleUI.Mappers;
-using TaxExport.ConsoleUI.Switchers;
+using TaxExport.ConsoleUI.DataModels;
 
 namespace TaxExport.ConsoleUI
 {
@@ -15,21 +12,17 @@ namespace TaxExport.ConsoleUI
 
     public class Application : IApplication
     {
-        private IConfig _config;
-        private IXmlPattern _pattern;
-        private ICsvSource _source;
-        private IDataMapper _dataMapper;
-        private IDataSwitcher _switcher;
-        private IXmlOutput _output;
+        private IConfig config;
+        private IDataMapper mapper;
+        private IDataSwitcher dataSwitcher;
+        private IFileHandler fileHandler;
 
-        public Application(IConfig config, IXmlPattern pattern, ICsvSource source, IDataMapper dataMapper, IDataSwitcher switcher, IXmlOutput output)
+        public Application(IConfig config, IDataMapper mapper, IDataSwitcher dataSwitcher, IFileHandler fileHandler)
         {
-            _config = config;
-            _pattern = pattern;
-            _source = source;
-            _dataMapper = dataMapper;
-            _switcher = switcher;
-            _output = output;
+            this.config = config;
+            this.mapper = mapper;
+            this.dataSwitcher = dataSwitcher;
+            this.fileHandler = fileHandler;
         }
         
         public void Run()
@@ -38,30 +31,30 @@ namespace TaxExport.ConsoleUI
             
             
             Console.WriteLine("Loading CSV File");           
-            var csv = _source.LoadToStringIEnum().ToList();
-            var data = _dataMapper.Map(csv);
+            var csv = fileHandler.LoadInputFile().ToList();
+            var data = mapper.Map(csv);
             Console.WriteLine(data.ToString());
 
-            Console.WriteLine($"{_config.OutputFolder()} was selected as output folder");
+            Console.WriteLine($"{config.OutputFolder()} was selected as output folder");
 
             Console.WriteLine("Processing Tax file");
-            var taxXml = _pattern.LoadToString(_config.TaxXmlFile());
-            var newTaxXml = _switcher.SwitchXmlValues(taxXml, data);
-            _output.SaveOutput(newTaxXml, "tax_output.xml");
+            var taxXml = fileHandler.LoadSourceFileToString(config.TaxXmlFile());
+            var newTaxXml = dataSwitcher.SwitchXmlValues(taxXml, data);
+            fileHandler.SaveOutputFile(newTaxXml, "tax_output.xml");
             Console.WriteLine("Tax file was saved to output directory.");
             Console.WriteLine("---");
             
             Console.WriteLine("Processing Social file");
-            var socialXml = _pattern.LoadToString(_config.SocialXmlFile());
-            var newSocialXml = _switcher.SwitchXmlValues(socialXml, data);
-            _output.SaveOutput(newSocialXml, "social_output.xml");
+            var socialXml = fileHandler.LoadSourceFileToString(config.SocialXmlFile());
+            var newSocialXml = dataSwitcher.SwitchXmlValues(socialXml, data);
+            fileHandler.SaveOutputFile(newSocialXml, "social_output.xml");
             Console.WriteLine("Social file was saved to output directory.");
             Console.WriteLine("---");
             
             Console.WriteLine("Processing Health file");
-            var healthFile = _pattern.LoadToString(_config.SocialXmlFile());
-            var newHealthXml = _switcher.SwitchXmlValues(healthFile, data);
-            _output.SaveOutput(newHealthXml, "health_output.xdp");
+            var healthFile = fileHandler.LoadSourceFileToString(config.HealthCareXdpFile());
+            var newHealthXml = dataSwitcher.SwitchXmlValues(healthFile, data);
+            fileHandler.SaveOutputFile(newHealthXml, "health_output.xdp");
             Console.WriteLine("Health file was saved to output directory.");
             Console.WriteLine("---");
 
