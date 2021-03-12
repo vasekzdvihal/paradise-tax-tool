@@ -4,28 +4,22 @@
     <projectFile>TaxExport.Console.UI/TaxExport.Console.UI.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66d03ae5-9a83-4895-8df2-097ba734d71f" name="Default Changelist" comment="workspace.xml added to git">
-      <change afterPath="$PROJECT_DIR$/TaxExport.Console.UI/DataSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TaxExport/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaxExport/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="66d03ae5-9a83-4895-8df2-097ba734d71f" name="Default Changelist" comment="Change of filling XML files to string replaces, easy configuration">
+      <change afterPath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TaxExport/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TaxExport/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Application.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Common/Config.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Common/Config.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Common/ContainerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Common/ContainerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/DTO/Config/FieldMapCSV.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Models/SourceConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/DTO/Config/FieldMapSectionP.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/DTO/DataToExport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Models/ClientData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/CsvSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/CsvSource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlOutput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlPattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlPattern.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Mappers/DataToExportMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/Mappers/DataMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Switchers/DataSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/TaxExport.Console.UI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/TaxExport.Console.UI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/DataSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/DataSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/CsvSource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlOutput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlPattern.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Mappers/DataMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/DataMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Models/ClientData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/ClientData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/Models/SourceConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/SourceConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/TaxExport.Console.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/TaxExport.Console.UI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/TaxExport.Console.UI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/TaxExport.Console.UI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/bin/Debug/netcoreapp3.1/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TaxExport.Console.UI/obj/Debug/netcoreapp3.1/TaxExport.Console.UI.pdb" afterDir="false" />
     </list>
@@ -47,6 +41,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A9C37662-579A-499A-A4DE-B3C85349280D/329/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/zdvih/RiderProjects/TableToDaneConverter/TaxExport.Console.UI/Application.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -66,10 +61,15 @@
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/Models/SourceConfig.cs" />
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlOutput.cs" />
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/FileHandlers/XmlPattern.cs" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/FileHandler.cs" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/Common/ContainerConfig.cs" />
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/Application.cs" />
-      <option value="$PROJECT_DIR$/TaxExport.Console.UI/config.json" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/ClientData.cs" />
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/Common/Config.cs" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/SourceConfig.cs" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/DataModels/DataMapper.cs" />
       <option value="$PROJECT_DIR$/TaxExport.Console.UI/DataSwitcher.cs" />
+      <option value="$PROJECT_DIR$/TaxExport.Console.UI/config.json" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1pYgjZNajFgpTuu77PuSx28NlB6" />
@@ -126,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615365573694</updated>
       <workItem from="1615365578120" duration="5975000" />
-      <workItem from="1615579298601" duration="9611000" />
+      <workItem from="1615579298601" duration="10548000" />
     </task>
     <task id="LOCAL-00001" summary="Changed loading of CSV data">
       <created>1615581404836</created>
@@ -142,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615581489308</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change of filling XML files to string replaces, easy configuration">
+      <created>1615589004353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615589004353</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +174,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Changed loading of CSV data" />
     <MESSAGE value="workspace.xml added to git" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml added to git" />
+    <MESSAGE value="Change of filling XML files to string replaces, easy configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change of filling XML files to string replaces, easy configuration" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
