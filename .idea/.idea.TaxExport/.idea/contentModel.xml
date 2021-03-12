@@ -28,6 +28,7 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="Resources" t="Include" />
         <e p="TaxExport.Console.UI.csproj" t="IncludeRecursive" />
       </e>
       <e p="TaxExport.sln" t="IncludeFlat" />
