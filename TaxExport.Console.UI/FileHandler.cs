@@ -14,13 +14,13 @@ namespace TaxExport.ConsoleUI
 
     public class FileHandler : IFileHandler
     {
-        private IConfig _config;
-        private string datePrefix;
+        private readonly IConfig _config;
+        private readonly string _datePrefix;
 
         public FileHandler(IConfig config)
         {
             _config = config;
-            datePrefix = DateTime.Now.ToString("yyyyMMdd_HHmmss_");
+            _datePrefix = DateTime.Now.ToString("yyyyMMdd_HHmmss_");
         }
         
         public IEnumerable<string> LoadInputFile()
@@ -37,7 +37,7 @@ namespace TaxExport.ConsoleUI
         
         public void SaveOutputFile(string stringDocument, string fileName = "defaultName.xml")
         {
-            var fullFileName = datePrefix + fileName;
+            var fullFileName = _datePrefix + fileName;
             File.WriteAllText(_config.OutputFolder() + fullFileName, stringDocument);
         }
     }

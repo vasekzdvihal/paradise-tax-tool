@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xfa generator="XFA2_4" APIVersion="2.6.7120.0"?>
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/">
+    <xfa:datasets xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/">
+        <xfa:data>
+            <OSVC>
+                <Formular>
+                    <Typ/>
+                    <PojPri> SurnamePositions </PojPri>
+                    <PojJme> NamePosition </PojJme>
+                    <PojTit/>
+                    <PojUli> SocialNumberPosition </PojUli>
+                    <PojCpCo> StreetNumberPosition/StreetOrientationNumberPosition </PojCpCo>
+                    <PojPSC> PostNumberPosition </PojPSC>
+                    <PojObe> CityPosition </PojObe>
+                    <PojPojPla/>
+                    <PojBanSpo> AccountNumberPosition/BankCodePosition </PojBanSpo>
+                    <PojCis> BirthNumberPosition </PojCis>
+                    <PojIC> IdentificationOrganizationNumberPosition </PojIC>
+                    <PojTel> PhonePosition </PojTel>
+                    <PojEma> EmailPosition </PojEma>
+                    <Prohlaseni_1/>
+                    <Prohlaseni_2/>
+                    <Mes1_1/>
+                    <Mes1_2/>
+                    <Mes1_3/>
+                    <Mes1_4/>
+                    <Mes1_5/>
+                    <Mes1_6/>
+                    <Mes1_7/>
+                    <Mes1_8/>
+                    <Mes1_9/>
+                    <Mes1_10/>
+                    <Mes1_11/>
+                    <Mes1_12/>
+                    <Mes1_13/>
+                    <Duvod1_1/>
+                    <Duvod1_2/>
+                    <Mes2_1/>
+                    <Mes2_2/>
+                    <Mes2_3/>
+                    <Mes2_4/>
+                    <Mes2_5/>
+                    <Mes2_6/>
+                    <Mes2_7/>
+                    <Mes2_8/>
+                    <Mes2_9/>
+                    <Mes2_10/>
+                    <Mes2_11/>
+                    <Mes2_12/>
+                    <Mes2_13/>
+                    <Duvod2_1/>
+                    <Duvod2_2/>
+                    <Duvod2_3/>
+                    <Duvod2_4/>
+                    <Duvod2_5/>
+                    <Duvod2_6/>
+                    <RCDeti1/>
+                    <RCDeti2/>
+                    <Priznani/>
+                    <Poradce/>
+                    <Radek1> IncomesPosition </Radek1>
+                    <Radek2> ExpensesPosition </Radek2>
+                    <Radek4/>
+                    <Radek5_Mes1/>
+                    <Radek5_Mes2/>
+                    <Radek5_Mes3/>
+                    <Radek5_Mes4/>
+                    <Radek5_Mes5/>
+                    <Radek5_Mes6/>
+                    <Radek5_Mes7/>
+                    <Radek5_Mes8/>
+                    <Radek5_Mes9/>
+                    <Radek5_Mes10/>
+                    <Radek5_Mes11/>
+                    <Radek5_Mes12/>
+                    <Radek5_Mes13/>
+                    <Radek6/>
+                    <Radek9/>
+                    <Radek12/>
+                    <Radek14/>
+                    <Radek16/>
+                    <Radek40/>
+                    <Radek41> HealthCarePaymentsPosition </Radek41>
+                    <Radek41a/>
+                    <Radek43/>
+                    <Preplatek1/>
+                    <Preplatek2/>
+                    <Radek51/>
+                    <TypZal/>
+                    <NovVysZal/>
+                    <DatVyp/>
+                </Formular>
+            </OSVC>
+        </xfa:data>
+    </xfa:datasets>
+    <pdf href="prehled-osvc-2020.pdf" xmlns="http://ns.adobe.com/xdp/pdf/"/>
+</xdp:xdp>

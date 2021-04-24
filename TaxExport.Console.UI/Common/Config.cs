@@ -22,6 +22,7 @@ namespace TaxExport.ConsoleUI.Common
         private string HealthCareXdoFile { get; }
         private string SocialXmlFile { get; }
         private SourceConfig SourceConfig { get; }
+        private string ConfigFileName { get; set; }
 
         public Config()
         {
@@ -73,7 +74,7 @@ namespace TaxExport.ConsoleUI.Common
                 IncomesPosition = (jCsv.SelectToken("IncomesPosition") ?? 0).Value<int>(),
                 ExpensesPosition = (jCsv.SelectToken("ExpensesPosition") ?? 0).Value<int>(),
                 TaxBasePosition = (jCsv.SelectToken("TaxBasePosition") ?? 0).Value<int>(),
-                HealtCarePaymentsPosition = (jCsv.SelectToken("HealthCarePaymentsPosition") ?? 0).Value<int>(),
+                HealthCarePaymentsPosition = (jCsv.SelectToken("HealthCarePaymentsPosition") ?? 0).Value<int>(),
                 SocialCarePaymentsPosition = (jCsv.SelectToken("SocialCarePaymentsPosition") ?? 0).Value<int>(),
             };
         }

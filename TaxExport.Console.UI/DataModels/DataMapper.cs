@@ -46,7 +46,7 @@ namespace TaxExport.ConsoleUI.DataModels
                 if (i == configMap.IncomesPosition) result.Incomes = values[offset];
                 if (i == configMap.ExpensesPosition) result.Expenses = values[offset];
                 if (i == configMap.TaxBasePosition) result.TaxBase = values[offset];
-                if (i == configMap.HealtCarePaymentsPosition) result.HealtCarePayments = values[offset];
+                if (i == configMap.HealthCarePaymentsPosition) result.HealthCarePayments = values[offset];
                 if (i == configMap.SocialCarePaymentsPosition) result.SocialCarePayments = values[offset];
             }
 

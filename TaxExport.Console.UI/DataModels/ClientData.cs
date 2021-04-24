@@ -20,12 +20,12 @@
         public string Incomes { get; set; }
         public string Expenses { get; set; }
         public string TaxBase { get; set; }
-        public string HealtCarePayments { get; set; }
+        public string HealthCarePayments { get; set; }
         public string SocialCarePayments { get; set; }
 
         public override string ToString()
         {
-            return $"{nameof(Name)}: {Name}, {nameof(Surname)}: {Surname}, {nameof(BirthNumber)}: {BirthNumber}, {nameof(IdentificationOrganizationNumber)}: {IdentificationOrganizationNumber}, {nameof(SocialNumber)}: {SocialNumber}, {nameof(StreetName)}: {StreetName}, {nameof(StreetNumber)}: {StreetNumber}, {nameof(StreetOrientationNumber)}: {StreetOrientationNumber}, {nameof(PostNumber)}: {PostNumber}, {nameof(City)}: {City}, {nameof(Phone)}: {Phone}, {nameof(Email)}: {Email}, {nameof(DataMailbox)}: {DataMailbox}, {nameof(AccountNumber)}: {AccountNumber}, {nameof(BankCode)}: {BankCode}, {nameof(Incomes)}: {Incomes}, {nameof(Expenses)}: {Expenses}, {nameof(TaxBase)}: {TaxBase}, {nameof(HealtCarePayments)}: {HealtCarePayments}, {nameof(SocialCarePayments)}: {SocialCarePayments}";
+            return $"{nameof(Name)}: {Name}, {nameof(Surname)}: {Surname}, {nameof(BirthNumber)}: {BirthNumber}, {nameof(IdentificationOrganizationNumber)}: {IdentificationOrganizationNumber}, {nameof(SocialNumber)}: {SocialNumber}, {nameof(StreetName)}: {StreetName}, {nameof(StreetNumber)}: {StreetNumber}, {nameof(StreetOrientationNumber)}: {StreetOrientationNumber}, {nameof(PostNumber)}: {PostNumber}, {nameof(City)}: {City}, {nameof(Phone)}: {Phone}, {nameof(Email)}: {Email}, {nameof(DataMailbox)}: {DataMailbox}, {nameof(AccountNumber)}: {AccountNumber}, {nameof(BankCode)}: {BankCode}, {nameof(Incomes)}: {Incomes}, {nameof(Expenses)}: {Expenses}, {nameof(TaxBase)}: {TaxBase}, {nameof(HealthCarePayments)}: {HealthCarePayments}, {nameof(SocialCarePayments)}: {SocialCarePayments}";
         }
     }
 }

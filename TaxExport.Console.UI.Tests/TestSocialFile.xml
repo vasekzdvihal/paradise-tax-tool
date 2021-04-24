@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OSVC xmlns="" version="2020.0">
+    <VENDOR productName="FormApps Server" productVersion="1.4.0"></VENDOR>
+    <SENDER EmailNotifikace="" ISDSreport="3"></SENDER>
+    <prehledosvc vsdp="SocialNumberPosition" for="prehledosvc" dep="" rok="2020" typ="N" dat="">
+        <client>
+            <name sur="SurnamePositions" fir="NamePosition" tit=""></name>
+            <birth bno="BirthNumberPosition" den=""></birth>
+            <adr str="StreetPosition" num="StreetNumberPosition/StreetOrientationNumberPosition" pnu="PostNumberPosition" cit="CityPosition" cnt="CZ"></adr>
+            <idds> DataMailboxPosition </idds>
+            <email> EmailPosition </email>
+            <tel> PhonePosition </tel>
+            <druc>H</druc>
+            <hlavc><m1></m1><m2></m2><m3></m3><m4></m4><m5></m5><m6></m6><m7></m7><m8></m8><m9></m9><m10></m10><m11></m11><m12></m12><m13></m13></hlavc>
+            <vedc><m1></m1><m2></m2><m3></m3><m4></m4><m5></m5><m6></m6><m7></m7><m8></m8><m9></m9><m10></m10><m11></m11><m12></m12><m13></m13><zam></zam><duchod></duchod><rprisp></rprisp><ppm></ppm><pece></pece><ndite></ndite></vedc><narok><m1></m1><m2></m2><m3></m3><m4></m4><m5></m5><m6></m6><m7></m7><m8></m8><m9></m9><m10></m10><m11></m11><m12></m12><m13></m13></narok>
+        </client>
+        <pvv pri="TaxBasePosition">
+            <mesc h="0" v=""></mesc>
+            <mesv h="0" v=""></mesv>
+            <mess h="0" v=""></mess>
+            <mesp>0</mesp>
+            <rdza h="0" v="0"></rdza>
+            <vvz h="0" v="0"></vvz>
+            <dvz h="0" v="0"></dvz>
+            <mvz>0</mvz>
+            <uvz>0</uvz>
+            <vzza></vzza>
+            <vzsu>0</vzsu>
+            <vzsvc>0</vzsvc>
+            <poj>0</poj>
+            <sniz>0</sniz>
+            <pojsniz>0</pojsniz>
+            <zal> SocialCarePaymentsPosition </zal>
+            <ned>0</ned>
+        </pvv>
+        <prihldp></prihldp>
+        <zal ved="" vz="0" dp="0" np="0"></zal>
+        <pre vra="0" kam=""><m1></m1><m2></m2><m3></m3><m4></m4><m5></m5><m6></m6><m7></m7><m8></m8><m9></m9><m10></m10><m11></m11><m12></m12>
+            <iban></iban>
+            <bs pu="" cu="" kb="" ss="" vs=""></bs>
+            <adr str="" num="" pnu="" cit="" cnt=""></adr>
+        </pre>
+        <prizn><pov>A</pov><podan></podan><elektr>N</elektr><por>N</por><pau popl="N" paud=""></pau><meldat></meldat><ucz>N</ucz></prizn>
+        <opr datopr="" duvod=""></opr>
+        <spo bno="" den=""><name sur="" fir="" tit=""></name><adr str="" num="" pnu="" cit="" cnt=""></adr></spo><prohl zou=""></prohl>
+        <dat dre=""></dat>
+        <prilo coun="0"></prilo>
+    </prehledosvc>
+</OSVC>
+

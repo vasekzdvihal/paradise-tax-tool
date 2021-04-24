@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxExport.Console.UI", "TaxExport.Console.UI\TaxExport.Console.UI.csproj", "{FD3D45DD-D4BA-45EB-967C-E7470C3257B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxExport.Console.UI.Tests", "TaxExport.Console.UI.Tests\TaxExport.Console.UI.Tests.csproj", "{7C51CDED-5DCB-4F9E-90D3-69CEF1CAED16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FD3D45DD-D4BA-45EB-967C-E7470C3257B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3D45DD-D4BA-45EB-967C-E7470C3257B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3D45DD-D4BA-45EB-967C-E7470C3257B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C51CDED-5DCB-4F9E-90D3-69CEF1CAED16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C51CDED-5DCB-4F9E-90D3-69CEF1CAED16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C51CDED-5DCB-4F9E-90D3-69CEF1CAED16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C51CDED-5DCB-4F9E-90D3-69CEF1CAED16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

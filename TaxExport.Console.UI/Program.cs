@@ -3,17 +3,14 @@ using Autofac;
 
 namespace TaxExport.ConsoleUI
 {
-    class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
             var container = ContainerConfig.Configure();
-            
-            using(var scope = container.BeginLifetimeScope())
-            {
-                var app = scope.Resolve<IApplication>();
-                app.Run();
-            }
+            using var scope = container.BeginLifetimeScope();
+            var app = scope.Resolve<IApplication>();
+            app.Run();
         }
     }
 }

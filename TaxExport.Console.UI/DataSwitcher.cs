@@ -7,11 +7,12 @@ namespace TaxExport.ConsoleUI
     public interface IDataSwitcher
     {
         string SwitchXmlValues(string xmlDocument, ClientData data);
+        string GetNewValueByProp(string propName, ClientData data);
     }
 
     public class DataSwitcher : IDataSwitcher
     {
-        private IConfig _config;
+        private readonly IConfig _config;
 
         public DataSwitcher(IConfig config)
         {
@@ -20,7 +21,7 @@ namespace TaxExport.ConsoleUI
         
         public string SwitchXmlValues(string xmlDocument, ClientData data)
         {
-            foreach (PropertyInfo prop in _config.SourceConfig().GetType().GetProperties())
+            foreach (var prop in _config.SourceConfig().GetType().GetProperties())
             {
                 var newValue = this.GetNewValueByProp(prop.Name, data);
                 xmlDocument = xmlDocument.Replace(prop.Name, newValue);
@@ -29,7 +30,7 @@ namespace TaxExport.ConsoleUI
             return xmlDocument;
         }
 
-        private string GetNewValueByProp(string propName, ClientData data)
+        public string GetNewValueByProp(string propName, ClientData data)
         {
             switch (propName)
             {
@@ -51,7 +52,7 @@ namespace TaxExport.ConsoleUI
                 case "IncomesPosition" : return data.Incomes;
                 case "ExpensesPosition" : return data.Expenses;
                 case "TaxBasePosition" : return data.TaxBase;
-                case "HealtCarePaymentsPosition" : return data.HealtCarePayments;
+                case "HealthCarePaymentsPosition" : return data.HealthCarePayments;
                 case "SocialCarePaymentsPosition" : return data.SocialCarePayments;
                 default: return "Unknown";
             }

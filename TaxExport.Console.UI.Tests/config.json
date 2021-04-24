@@ -1,0 +1,29 @@
+﻿{
+  "DefaultInput" : "C:\\test\\new\\long\\input_form.csv",
+  "OutputFolder" : "C:\\test\\new\\long\\output\\",
+  "TaxXmlFile" : "C:\\test\\new\\long\\DPFO.xml",
+  "HealthCareXdoFile" : "C:\\test\\new\\long\\VZP.xdp",
+  "SocialXmlFile" : "C:\\test\\new\\long\\CSSZ.xml",
+  "CSV" : {
+    "NamePosition" : 0,
+    "SurnamePositions" : 1,
+    "BirthNumberPosition": 2,
+    "IdentificationOrganizationNumberPosition": 3,
+    "SocialNumberPosition" : 4,
+    "StreetPosition" : 5,
+    "StreetNumberPosition" : 6,
+    "StreetOrientationNumberPosition" : 7,
+    "PostNumberPosition" : 8,
+    "CityPosition" : 9,
+    "PhonePosition" : 10,
+    "EmailPosition" : 11,
+    "DataMailboxPosition" : 12,
+    "AccountNumberPosition" : 13,
+    "BankCodePosition" : 14,
+    "IncomesPosition" : 15,
+    "ExpensesPosition" : 16,
+    "TaxBasePosition" : 17,
+    "HealthCarePaymentsPosition" : 18,
+    "SocialCarePaymentsPosition" : 19
+  }
+}
